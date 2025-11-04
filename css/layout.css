@@ -7,7 +7,6 @@
   margin-top: 0;
 }
 
-/* SECCIÓN MEJORES VUELOS */
 .mejores-vuelos {
   max-width: 1400px;
   margin: -20px auto 60px auto;
@@ -25,7 +24,6 @@
   margin-bottom: 40px;
   margin-left: 25px; 
 }
-/* AGREGAR ESTO: */
 .mejores-vuelos .subtitulo {
   font-size: 14px;
   color: #888;
@@ -102,17 +100,17 @@
 
 .destinos-container {
   position: relative;
-  width: 1000px; /* Contenedor fijo para 4 tarjetas */
+  width: 1000px; 
   margin: 0 auto;
   overflow: hidden;
-  padding: 0 80px; /* Espacio para las flechas */
+  padding: 0 80px; 
 }
 
 .destinos-grid {
-  display: grid; /* CAMBIO CLAVE: de flex a grid */
-  grid-template-columns: repeat(4, 245px); /* 4 columnas fijas de 245px */
+  display: grid; 
+  grid-template-columns: repeat(4, 245px);
   gap: 20px;
-  justify-content: center; /* Centrar las tarjetas */
+  justify-content: center; 
 }
 
 .flecha-destinos {
@@ -136,11 +134,11 @@
 }
 
 .flecha-izq {
-  left: 0; /* Fuera del contenedor principal */
+  left: 0; 
 }
 
 .flecha-der {
-  right: 0; /* Fuera del contenedor principal */
+  right: 0; 
 }
 
 .flecha-destinos:hover {
@@ -148,8 +146,6 @@
   color: white;
 }
 
-
-/* Indicadores de página */
 .paginas-indicadores {
   display: flex;
   justify-content: center;
@@ -176,11 +172,10 @@
   background: #A12885;
 }
 
-/* SECCIÓN PAGO SEGURO */
 .pago-seguro {
   background: #F0F0F0;
-    padding: 0px 90px;  
-     margin-top: -30px; 
+  padding: 0px 90px;  
+  margin-top: -30px; 
 }
 
 .pago-seguro h2 {
@@ -231,7 +226,7 @@
   background: white;
   max-width: 1000px;
   margin-left: 0;   
-  padding: 30px 50px; /* Cambiar de 0px a 30px el primer valor */
+  padding: 30px 50px; 
   border-radius: 18px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.10);
 }
@@ -253,7 +248,6 @@
   margin: 0;
 }
 
-/* SECCIÓN SERVICIOS ADICIONALES */
 .servicios-adicionales {
   background: #F0F0F0;
   padding: 20px 90px 60px 90px;
@@ -269,7 +263,6 @@
   margin: 0;
 }
 
-/* PIE DE PÁGINA NEGRO */
 .footer {
   background: #000;
   margin-top: 0;
@@ -282,7 +275,7 @@
   z-index: 10;
   padding: 0 90px;
 }
-/* CAJA MÁS DELGADA Y CONTENIDO CENTRADO */
+
 .suscripcion-contenedor {
   background: white;
   border-radius: 16px;
@@ -423,12 +416,12 @@
 }
 .apps-container {
   display: flex;
-  gap: 10px;       /* antes 20px */
+  gap: 10px;       
   margin: 10px 0 15px 0;
 }
 
 .app-btn {
-  height: 45px;     /* antes 60px */
+  height: 45px;     
   cursor: pointer;
   transition: 0.3s;
 }
@@ -474,11 +467,10 @@
 }
 
 .icon {
-  width: 40px; /* tamaño del logo dentro del círculo */
+  width: 40px; 
   height: 40px;
 }
 
-/* FOOTER ENLACES - TODO EN UNO */
 .footer-enlaces {
   background: #000;
   padding: 50px 90px;
@@ -487,10 +479,17 @@
 
 .footer-links-top {
   display: grid;
-  grid-template-columns: repeat(5, 1fr); /* coincide con las columnas arriba */
+  grid-template-columns: repeat(5, 1fr);
   max-width: 1100px;
   margin: 20px auto 10px auto;
-  padding-left: 90px; /* opcional para alinearlo igual que las columnas */
+  padding-left: 90px;
+}
+
+.footer-links-top a {
+  color: #fff !important;
+  text-decoration: underline;
+  font-size: 14px;
+  font-weight: 500;
 }
 
 .footer-links-bottom a {
@@ -535,7 +534,6 @@
   font-size: 15px;
 }
 
-/* Asegurar que cada uno caiga EXACTO en su columna */
 .footer-links-top a:nth-child(1) {
   margin-left: -90px;
 }
@@ -579,8 +577,6 @@
   text-decoration: underline;
 }
 
-
-/* RESPONSIVE */
 @media (max-width: 1200px) {
   .nav {
     padding: 15px 30px;
