@@ -224,4 +224,42 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
+    // MODAL DE RESERVA
+    // Selecciona modal y botones de reserva; abre modal al hacer click y permite cerrarlo
+    const modal = document.getElementById('miModal');
+    const modalContent = modal ? modal.querySelector('.modal-content') : null;
+    const closeBtn = modal ? modal.querySelector('.close-btn') : null;
+
+    // Abre el modal y opcionalmente llena el campo de destino con el texto de la tarjeta
+    document.querySelectorAll('.reserva-btn').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            // Intentar obtener el nombre del destino desde la tarjeta
+            const cardInfo = e.currentTarget.closest('.destino-info');
+            const destinoTexto = cardInfo ? (cardInfo.querySelector('h3')?.textContent || '') : '';
+            const modalDestino = document.getElementById('modal-destino');
+            if (modalDestino && destinoTexto) modalDestino.value = destinoTexto;
+
+            if (modal) {
+                // Usamos flex para respetar estilos definidos en CSS (.modal-overlay usa align-items/justify-content)
+                modal.style.display = 'flex';
+            }
+        });
+    });
+
+    // Cerrar al click en la "x"
+    if (closeBtn) {
+        closeBtn.addEventListener('click', () => {
+            if (modal) modal.style.display = 'none';
+        });
+    }
+
+    // Cerrar al hacer click fuera del contenido del modal
+    if (modal) {
+        modal.addEventListener('click', (e) => {
+            if (!e.target.closest('.modal-content')) {
+                modal.style.display = 'none';
+            }
+        });
+    }
+
 });
